@@ -1,11 +1,15 @@
-print("Hello")
-print("Machiavelli")
-class NewAbility():
-    def __init__(self, voice):
-        self.voice = voice
+from random import randint
+class Ability():
+    def __init__(self, name):
+        self.name = name
 
-    def scream(self):
-        print(f"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA {self.voice}")
+    def introduce(self):
+        print(f"Hello I am {self.name.title()}")
 
-cat = NewAbility("meow")
-cat.scream()
+    def attact(self):
+        dmg = randint(0,10)
+        print(f"{self.name.title()} attacked {dmg} dmg!")
+
+cat = Ability("Brajan")
+cat.introduce()
+cat.attact()
