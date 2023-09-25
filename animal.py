@@ -1,4 +1,3 @@
-from random import randint
 class Ability():
     def __init__(self, name):
         self.name = name
@@ -6,10 +5,6 @@ class Ability():
     def introduce(self):
         print(f"Hello I am {self.name.title()}")
 
-    def attact(self):
-        dmg = randint(0,10)
+    def attack(self, dmg=7):
         print(f"{self.name.title()} attacked {dmg} dmg!")
-
-cat = Ability("Brajan")
-cat.introduce()
-cat.attact()
+        return dmg
